@@ -1,0 +1,106 @@
+class Fruits:
+    def paddy(self):
+        print("Enter the Disease name from below")
+        print("1.Rice Blast")
+        print("2.Brown Spot of Rice")
+        print("3.Sheath blight of Rice")
+        print("4.Bacterial leaf blight")
+        m = int(input())
+        print("The Fertilizers to be used are")
+        if(m == 1):
+            print("Pseudomonas fluorescens @ 10g/kg of seed")
+        elif(m == 2):
+            print("Spray field twice with Mancozeb@0.2%")
+        elif(m == 3):
+            print("Spray Propiconazole@0.1% or Hexaconazole@0.2%")
+        elif(m == 4):
+            print("Spray Streptocycline(250 ppm) along Cu oxychloride(0.3%)")
+        else:
+            print("Sorry please select the disease from the given above list")
+
+    def Grape(self):
+        print("Enter the Disease name from below")
+        print("1.Downy Mildew")
+        print("2.Powdery Mildew")
+        print("3.Anthracnose")
+        m = int(input())
+        print("The Fertilizers to be used are")
+        if(m == 1):
+            print("Spray Bordeaux mixture 0.5% at 15 days gap")
+        elif(m == 2):
+            print("Spray Sulfar 2.0 g/l or Dinocap 0.25 ml/l")
+        elif(m == 3):
+            print("Spray copper hydroxide 2.0 g/l or Chloronthalonil 2kg/ha")
+        else:
+            print("Sorry please select the disease from the given list")
+
+
+class Vegetables:
+    def Tomato(self):
+        print("Enter the Disease name from below")
+        print("1.Early leaf Blight")
+        print("2.Leaf Mold")
+        m = int(input())
+        print("The Fertilizers to be used are")
+        if(m == 1):
+            print("Spray Mancozeb 80WP at 1.5 - 2 lb/100 gal at 5 days gap")
+        elif(m == 2):
+            print("Spray Tanos 50WG at 6-8 oz at 3 days gap")
+        else:
+            print("Sorry please select the disease from the given list")
+
+    def Potato(self):
+        print("Enter the Disease name from below")
+        print("1.Potato tuber moth")
+        print("2.Agrotis ypsilon")
+        print("3.Myzus persicae")
+        m = int(input())
+        if(m == 1):
+            print("Spray Lambda cyhalothrin 600ml/ha")
+        elif(m == 2):
+            print("Spray 20 SC 300ml/ha or Tracer 48 SC 200ml/ha")
+        elif(m == 3):
+            print("Spray Actara(thiamethoxam) 25WG 600g/ha")
+        else:
+            print("Sorry please select the disease from the given list")
+
+
+class plant:
+    def call(self):
+        print("Welcome to Plant disease analysis")
+        print("Please choose the category of plant ")
+        print("1.Fruits")
+        print("2.Vegetables")
+
+
+class choice(Fruits, Vegetables):
+    def select(self):
+            N = int(input("Enter the choice"))
+            if (N == 1):
+                print("1.Paddy")
+                print("2.Grape")
+                m = int(input("Enter the choice"))
+                if(m == 1):
+                    obj.paddy()
+                elif(m == 2):
+                    obj.Grape()
+                else:
+                    print("Please select input from above options")
+
+            elif (N == 2):
+                print("1.Tomato")
+                print("2.Potato")
+                m = int(input("Enter the choice"))
+                if(m == 1):
+                    obj.Tomato()
+                elif(m == 2):
+                    obj.Potato()
+                else:
+                    print("Please select input from above options")
+            else:
+                    print("Please select input from above options")
+
+object1 = plant()
+object1.call()
+obj = choice()
+obj.select()
