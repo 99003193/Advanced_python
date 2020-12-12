@@ -34,8 +34,7 @@ class Disease:
         else:
             print("Sorry please select the disease from the given list")
 
-
-def tomato(self):
+    def tomato(self):
         print("Enter the Disease name from below")
         print("1.Early leaf Blight")
         print("2.Leaf Mold")
@@ -48,8 +47,7 @@ def tomato(self):
         else:
             print("Sorry please select the disease from the given list")
 
-
-def potato(self):
+    def potato(self):
         print("Enter the Disease name from below")
         print("1.Potato tuber moth")
         print("2.Agrotis ypsilon")
@@ -82,4 +80,3 @@ elif (N == 4):
     obj.potato()
 else:
     print("Please enter from given options")
-    
