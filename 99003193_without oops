@@ -80,3 +80,4 @@ elif (N == 4):
     obj.potato()
 else:
     print("Please enter from given options")
+
