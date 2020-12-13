@@ -1,9 +1,14 @@
+import re
+
+
 class Fruits:
-    def paddy(self):
+    # Class Fruits is created
+    def Apple(self):
+        # Method Apple is created under Fruits category
         print("Enter the Disease name from below")
-        print("1.Rice Blast")
-        print("2.Brown Spot of Rice")
-        print("3.Sheath blight of Rice")
+        print("1.Blast")
+        print("2.Brown Spot")
+        print("3.Sheath blight")
         print("4.Bacterial leaf blight")
         m = int(input())
         print("The Fertilizers to be used are")
@@ -19,6 +24,7 @@ class Fruits:
             print("Sorry please select the disease from the given above list")
 
     def Grape(self):
+        # Method Grape is created under Fruits category
         print("Enter the Disease name from below")
         print("1.Downy Mildew")
         print("2.Powdery Mildew")
@@ -36,7 +42,9 @@ class Fruits:
 
 
 class Vegetables:
+    # Class Vegetables is created
     def Tomato(self):
+        # Method Tomato is created under Vegetables category
         print("Enter the Disease name from below")
         print("1.Early leaf Blight")
         print("2.Leaf Mold")
@@ -50,6 +58,7 @@ class Vegetables:
             print("Sorry please select the disease from the given list")
 
     def Potato(self):
+        # Method Potato is created under Vegetables category
         print("Enter the Disease name from below")
         print("1.Potato tuber moth")
         print("2.Agrotis ypsilon")
@@ -66,7 +75,9 @@ class Vegetables:
 
 
 class plant:
+        # Class plant is created
     def call(self):
+        # Method call is created
         print("Welcome to Plant disease analysis")
         print("Please choose the category of plant ")
         print("1.Fruits")
@@ -74,14 +85,16 @@ class plant:
 
 
 class choice(Fruits, Vegetables):
+        # Using Inheritance to call Fruits and Vegetables under choice
     def select(self):
-            N = int(input("Enter the choice"))
+        # To select the Fruits and Vegetables category
+            N = int(input("Enter the choice\n"))
             if (N == 1):
-                print("1.Paddy")
+                print("1.Apple")
                 print("2.Grape")
-                m = int(input("Enter the choice"))
+                m = int(input("Enter the choice\n"))
                 if(m == 1):
-                    obj.paddy()
+                    obj.Apple()
                 elif(m == 2):
                     obj.Grape()
                 else:
@@ -90,7 +103,7 @@ class choice(Fruits, Vegetables):
             elif (N == 2):
                 print("1.Tomato")
                 print("2.Potato")
-                m = int(input("Enter the choice"))
+                m = int(input("Enter the choice\n"))
                 if(m == 1):
                     obj.Tomato()
                 elif(m == 2):
@@ -100,8 +113,23 @@ class choice(Fruits, Vegetables):
             else:
                     print("Please select input from above options")
 
+
+class End:
+    # End class is created
+    def __init__(self):
+        self.ld = self.Use()
+
+    class Use:
+        # Here Regular Expressions is implemented
+        def display(self):
+            print("Thank you for using this Software")
+            print(re.match("[A-Z a-z]+", "Plant"))
+            print(re.match("[A-Z a-z]+", "Disease"))
+            print(re.match("[A-z a-z]+", "Analysis"))
+
 object1 = plant()
 object1.call()
 obj = choice()
 obj.select()
-
+d = End.Use()
+d.display()
